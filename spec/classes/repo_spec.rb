@@ -13,7 +13,7 @@ describe 'mongodb::repo' do
         it { is_expected.to raise_error(Puppet::Error, %r{unsupported}) }
       end
 
-      describe 'with version set' do
+      describe 'with version set' do # rubocop: disable RSpec/EmptyExampleGroup
         let :params do
           {
             version: '3.6.1'
@@ -57,7 +57,7 @@ describe 'mongodb::repo' do
         end
       end
 
-      describe 'with proxy' do
+      describe 'with proxy' do # rubocop: disable RSpec/EmptyExampleGroup
         let :params do
           {
             version: '3.6.1',

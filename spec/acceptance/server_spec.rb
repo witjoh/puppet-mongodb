@@ -185,7 +185,7 @@ describe 'mongodb::server class' do
       it { is_expected.not_to be_running }
     end
 
-    describe port(27_017) do
+    describe port(27_017), :port27017 do
       it { is_expected.not_to be_listening }
     end
 

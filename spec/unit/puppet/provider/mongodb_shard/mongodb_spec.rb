@@ -66,11 +66,6 @@ describe Puppet::Type.type(:mongodb_shard).provider(:mongo) do
     end
   end
 
-  describe 'destroy' do
-    it 'removes a shard' do
-    end
-  end
-
   describe 'exists?' do
     it 'checks if shard exists' do
       instance.exists?

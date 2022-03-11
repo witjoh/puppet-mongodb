@@ -358,7 +358,7 @@ describe 'mongodb::server' do
 
       context 'when setting up replicasets' do
         describe 'should setup using replset_config' do
-          let(:rsConf) do
+          let(:rs_conf) do
             {
               'rsTest' => {
                 'members' => [
@@ -374,15 +374,15 @@ describe 'mongodb::server' do
           let(:params) do
             {
               replset: 'rsTest',
-              replset_config: rsConf
+              replset_config: rs_conf
             }
           end
 
-          it { is_expected.to contain_class('mongodb::replset').with_sets(rsConf) }
+          it { is_expected.to contain_class('mongodb::replset').with_sets(rs_conf) }
         end
 
         describe 'should setup using replset_members' do
-          let(:rsConf) do
+          let(:rs_conf) do
             {
               'rsTest' => {
                 'ensure' => 'present',
@@ -406,7 +406,7 @@ describe 'mongodb::server' do
             }
           end
 
-          it { is_expected.to contain_class('mongodb::replset').with_sets(rsConf) }
+          it { is_expected.to contain_class('mongodb::replset').with_sets(rs_conf) }
         end
       end
     end
