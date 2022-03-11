@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe 'mongodb::db' do
@@ -5,7 +7,7 @@ describe 'mongodb::db' do
     let(:title) { 'testdb' }
 
     let(:params) do
-      { 'user'     => 'testuser',
+      { 'user' => 'testuser',
         'password' => 'testpass' }
     end
 
@@ -43,8 +45,8 @@ describe 'mongodb::db' do
 
     let(:params) do
       {
-        'db_name'  => 'testdb',
-        'user'     => 'testuser',
+        'db_name' => 'testdb',
+        'user' => 'testuser',
         'password' => 'testpass'
       }
     end

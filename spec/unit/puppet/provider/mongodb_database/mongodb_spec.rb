@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 require 'tempfile'
 
@@ -6,13 +8,13 @@ describe Puppet::Type.type(:mongodb_database).provider(:mongodb) do
     {
       'databases' => [
         {
-          'name'       => 'admin',
+          'name' => 'admin',
           'sizeOnDisk' => 83_886_080,
-          'empty'      => false
+          'empty' => false
         }, {
-          'name'       => 'local',
+          'name' => 'local',
           'sizeOnDisk' => 83_886_080,
-          'empty'      => false
+          'empty' => false
         }
       ],
       'totalSize' => 251_658_240,
