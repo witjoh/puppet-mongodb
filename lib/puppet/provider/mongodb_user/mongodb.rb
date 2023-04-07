@@ -84,6 +84,7 @@ Puppet::Type.type(:mongodb_user).provide(:mongodb, parent: Puppet::Provider::Mon
       @property_hash[:password_hash] = ''
       @property_hash[:roles] = @resource[:roles]
 
+      Puppet.debug("In mongodb_user: create, on master = #{db_ismaster} and with user data #{@property_hash}")
       exists?
     end
   end
